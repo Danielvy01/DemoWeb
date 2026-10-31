@@ -119,7 +119,16 @@ public class Program
         builder.Services.AddScoped<SunatSignerService>();
         builder.Services.AddScoped<SunatClientService>();
         builder.Services.AddSingleton<SunatQueueProcessor>();
-        builder.Services.AddHostedService(provider => provider.GetRequiredService<SunatQueueProcessor>());
+
+        try
+        {
+            builder.Services.AddHostedService(provider => provider.GetRequiredService<SunatQueueProcessor>());
+        }
+        catch (Exception ex)
+        {
+            // Loggea el error, pero DEJA QUE LA APP CONTINUE para que Swagger sea accesible
+            Console.WriteLine($"El servicio sunat aún no está disponible temporalmente: {ex.Message}");
+        }
 
         // Marketing (campañas WhatsApp / correo)
         builder.Services.AddHttpClient();
