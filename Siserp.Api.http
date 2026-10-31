@@ -1,6 +1,0 @@
-@Siserp.Api_HostAddress = http://localhost:5217
-
-GET {{Siserp.Api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
