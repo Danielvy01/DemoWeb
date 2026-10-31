@@ -1,0 +1,29 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace Siserp.Api.Migrations
+{
+    /// <inheritdoc />
+    public partial class AddComprobanteFotoUrlToCompra : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AddColumn<string>(
+                name: "ComprobanteFotoUrl",
+                table: "Compras",
+                type: "nvarchar(255)",
+                maxLength: 255,
+                nullable: true);
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "ComprobanteFotoUrl",
+                table: "Compras");
+        }
+    }
+}

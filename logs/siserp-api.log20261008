@@ -1,3 +1,0 @@
-2026-10-08 16:01:27,884 [2] WARN  Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository - Using an in-memory repository. Keys will not be persisted to storage.
-2026-10-08 16:01:27,894 [2] WARN  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
-2026-10-08 16:01:27,910 [7] WARN  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - No XML encryptor configured. Key {2c3d8930-6d39-43a1-b0cb-7ecd4e029a0e} may be persisted to storage in unencrypted form.
